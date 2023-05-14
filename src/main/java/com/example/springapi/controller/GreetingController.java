@@ -5,15 +5,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GreetingController {
+
   @GetMapping(value = "/api")
-  public String getTestData() {
+  public String getHelloWorld() {
     String helloWorld = "Hello World!";
 
     return helloWorld;
   }
 
   @GetMapping(value = "/api/greeting/{name}")
-  public String getTestData(@PathVariable String name) {
+  public String getGreeting(@PathVariable String name) {
     String greeting = "Hello " + name + ", nice to meet you!";
 
     return greeting;
